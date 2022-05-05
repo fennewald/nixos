@@ -1,0 +1,6 @@
+default_border pixel 2
+
+client.focused          #7fff7f #7fff7f #000000 #ffffff #7fff7f
+client.focused_inactive #224522 #224522 #000000 #ffffff #224522
+client.unfocused        #222222 #222222 #000000 #ffffff #222222
+client.urgent           #ffb86c #ffb86c #000000 #ffffff #ffb86c

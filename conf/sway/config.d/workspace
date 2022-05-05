@@ -1,0 +1,25 @@
+
+set $workspace_mod Mod4
+
+# Management
+bindsym $workspace_mod+z layout tabbed
+bindsym $workspace_mod+x layout stacking
+bindsym $workspace_mod+a focus parent
+
+# Movement
+bindsym $workspace_mod+h workspace prev_on_output
+bindsym $workspace_mod+l workspace next_on_output
+bindsym $workspace_mod+j workspace prev_on_output
+bindsym $workspace_mod+k workspace next_on_output
+
+
+bindsym $workspace_mod+1 workspace 1
+bindsym $workspace_mod+2 workspace 2
+bindsym $workspace_mod+3 workspace 3
+bindsym $workspace_mod+4 workspace 4
+bindsym $workspace_mod+5 workspace 5
+bindsym $workspace_mod+6 workspace 6
+bindsym $workspace_mod+7 workspace 7
+bindsym $workspace_mod+8 workspace 8
+bindsym $workspace_mod+9 workspace 9
+bindsym $workspace_mod+0 workspace 10

@@ -1,0 +1,64 @@
+# TODO
+# Backgrounds
+
+# Setup Monitor vars
+set $monitor_l DP-3
+set $monitor_r HDMI-A-1
+set $monitor_t DP-2
+set $monitor_b DP-1
+
+# Shortcut keys
+set $monitor_mod Ctrl+Mod4
+set $monitor_key_l h
+set $monitor_key_r l
+set $monitor_key_t k
+set $monitor_key_b j
+set $monitor_key_l1 y
+set $monitor_key_r1 o
+set $monitor_key_t1 i
+set $monitor_key_b1 u
+set $monitor_key_l2 n
+set $monitor_key_r2 Period
+set $monitor_key_t2 Comma
+set $monitor_key_b2 m
+
+# Setup outputs
+output $monitor_t mode 2560x1440@60hz pos 1080    0 transform 180
+output $monitor_b mode 2560x1440@60hz pos 1080 1440
+output $monitor_l mode 1920x1080      pos    0  900 transform 90
+output $monitor_r mode 1920x1080      pos 3640  900 transform 270
+
+# Keybinds
+# Goto Monitor, focus
+bindsym $monitor_mod+$monitor_key_l focus output $monitor_l
+bindsym $monitor_mod+$monitor_key_r focus output $monitor_r
+bindsym $monitor_mod+$monitor_key_t focus output $monitor_t
+bindsym $monitor_mod+$monitor_key_b focus output $monitor_b
+# Goto Monitor, focus (repeat with shift)
+bindsym $monitor_mod+Shift+$monitor_key_l focus output $monitor_l
+bindsym $monitor_mod+Shift+$monitor_key_r focus output $monitor_r
+bindsym $monitor_mod+Shift+$monitor_key_t focus output $monitor_t
+bindsym $monitor_mod+Shift+$monitor_key_b focus output $monitor_b
+
+# Bring workspace to monitor, focus
+bindsym $monitor_mod+$monitor_key_l1 move workspace to output $monitor_l; focus output $monitor_l
+bindsym $monitor_mod+$monitor_key_r1 move workspace to output $monitor_r; focus output $monitor_r
+bindsym $monitor_mod+$monitor_key_t1 move workspace to output $monitor_t; focus output $monitor_t
+bindsym $monitor_mod+$monitor_key_b1 move workspace to output $monitor_b; focus output $monitor_b
+# Bring workspace to monitor, no focus
+bindsym $monitor_mod+Shift+$monitor_key_l1 move workspace to output $monitor_l
+bindsym $monitor_mod+Shift+$monitor_key_r1 move workspace to output $monitor_r
+bindsym $monitor_mod+Shift+$monitor_key_t1 move workspace to output $monitor_t
+bindsym $monitor_mod+Shift+$monitor_key_b1 move workspace to output $monitor_b
+
+# Bring container to monitor, focus
+bindsym $monitor_mod+$monitor_key_l2 move container to output $monitor_l; focus output $monitor_l
+bindsym $monitor_mod+$monitor_key_r2 move container to output $monitor_r; focus output $monitor_r
+bindsym $monitor_mod+$monitor_key_t2 move container to output $monitor_t; focus output $monitor_t
+bindsym $monitor_mod+$monitor_key_b2 move container to output $monitor_b; focus output $monitor_b
+# Bring container to monitor, no focus
+bindsym $monitor_mod+Shift+$monitor_key_l2 move container to output $monitor_l
+bindsym $monitor_mod+Shift+$monitor_key_r2 move container to output $monitor_r
+bindsym $monitor_mod+Shift+$monitor_key_t2 move container to output $monitor_t
+bindsym $monitor_mod+Shift+$monitor_key_b2 move container to output $monitor_b
+

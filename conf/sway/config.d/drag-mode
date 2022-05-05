@@ -1,0 +1,39 @@
+# Drag mode
+mode "drag" {
+    # Move around monitors
+    bindsym y focus output left
+    bindsym p focus output right
+    bindsym i focus output top
+    bindsym u focus output bottom
+    # Move around workspaces
+    bindsym h workspace prev_on_output
+    bindsym j workspace prev_on_output
+    bindsym k workspace next_on_output
+    bindsym l workspace next_on_output
+    # Move around containers
+    bindsym n focus left
+    bindsym Period focus right
+    bindsym m focus down
+    bindsym Comma focus up
+
+    # Drag around monitors
+    bindsym Shift+y focus output left
+    bindsym Shift+p focus output right
+    bindsym Shift+i focus output top
+    bindsym Shift+u focus output bottom
+    # Drag around workspaces
+    bindsym Shift+h workspace prev_on_output
+    bindsym Shift+j workspace prev_on_output
+    bindsym Shift+k workspace next_on_output
+    bindsym Shift+l workspace next_on_output
+    # Drag around containers
+    bindsym Shift+n focus left
+    bindsym Shift+Period focus right
+    bindsym Shift+m focus down
+    bindsym Shift+Comma focus up
+
+    # Go back
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+#bindsym Mod1 mode "drag"

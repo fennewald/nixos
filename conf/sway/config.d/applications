@@ -1,0 +1,19 @@
+
+
+set $app_mod Ctrl
+
+# Application launcher
+bindsym Mod1+Ctrl+Mod4+Shift+m exec bemenu-run --prompt "run" --bottom --no-overlap
+# Copy currently open program
+#bindsym $app_mod+y exec
+# Termianl
+bindsym $app_mod+u exec alacritty
+# Web browser (standard)
+bindsym $app_mod+i exec vimb
+# Web browser (fancy)
+bindsym $app_mod+o exec firefox
+# Unknown
+bindsym $app_mod+p exec chromium
+bindsym $app_mod+Shift+p exec chromium --incognito
+# Floating
+bindsym $app_mod+f floating toggle

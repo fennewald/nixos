@@ -1,0 +1,24 @@
+set $container_mod Ctrl
+
+# Manage
+bindsym $container_mod+w kill
+
+# Navigate
+bindsym $container_mod+h focus left
+bindsym $container_mod+l focus right
+bindsym $container_mod+j focus down
+bindsym $container_mod+k focus up
+bindsym $container_mod+Left focus left
+bindsym $container_mod+Right focus right
+bindsym $container_mod+Down focus down
+bindsym $container_mod+Up focus up
+# Move
+bindsym $container_mod+Shift+h move left
+bindsym $container_mod+Shift+l move right
+bindsym $container_mod+Shift+j move down
+bindsym $container_mod+Shift+k move up
+bindsym $container_mod+Shift+Left move left
+bindsym $container_mod+Shift+Right move right
+bindsym $container_mod+Shift+Down move down
+bindsym $container_mod+Shift+Up move up
+
