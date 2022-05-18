@@ -6,6 +6,8 @@
       gtk_theme_variant = "dark";
     };
 
+    shell.program = "nu";
+
     hints.alphabet = "asdfghjkl;";
     cursor = {
       unfocused_hollow = true;
