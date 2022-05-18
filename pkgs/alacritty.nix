@@ -1,79 +1,53 @@
-{ nixosConfig, ... }:
-let
-  common = import ./common.nix;
-  solarized = common.colorschemes.solarized;
-
-  colorschemes = {
-    # https://github.com/alacritty/alacritty/wiki/Color-schemes#solarized
-    solarized-dark = {
-      # Default colors
-      primary = {
-        background = solarized.base03;
-        foreground = solarized.base0;
-      };
-
-      # Cursor colors
-      cursor = {
-        text = solarized.base03;
-        cursor = solarized.base0;
-      };
-
-      # Normal colors
-      normal = {
-        black = solarized.base02;
-        red = solarized.red;
-        green = solarized.green;
-        yellow = solarized.yellow;
-        blue = solarized.blue;
-        magenta = solarized.magenta;
-        cyan = solarized.cyan;
-        white = solarized.base2;
-      };
-
-      # Bright colors
-      bright = {
-        black = solarized.base03;
-        red = solarized.orange;
-        green = solarized.base01;
-        yellow = solarized.base00;
-        blue = solarized.base0;
-        magenta = solarized.violet;
-        cyan = solarized.base1;
-        white = solarized.base3;
-      };
-    };
-  };
-in
 {
-  programs.alacritty = {
-    enable = nixosConfig.sbruder.gui.enable;
-    settings = {
-      font = {
-        normal = {
-          family = "Iosevka Nerd Font";
-          style = "Regular";
-        };
-        size = 13.5;
+  enable = true;
+  settings = {
+    window = {
+      dynamic_title = true;
+      gtk_theme_variant = "dark";
+    };
+
+    hints.alphabet = "asdfghjkl;";
+    cursor = {
+      unfocused_hollow = true;
+      style.shape = "Block";
+      style.blinking = "Off";
+    };
+
+    font = {
+      size = 10.0;
+      normal.family = "JuliaMono";
+      normal.style = "Medium";
+      bold.family = "JuliaMono";
+      bold.style = "Bold";
+      italic.family = "JuliaMono";
+      italic.style = "Italic";
+      bold_italic.family = "JuliaMono";
+      bold_italic.style = "Bold Italic";
+    };
+
+    colors = {
+      primary.foreground = "0x919191";
+      primary.background = "0x000000";
+      normal = {
+        black   = "0x303030";
+        red     = "0xa43261";
+        green   = "0x006ca5";
+        yellow  = "0x007086";
+        blue    = "0x6751a6";
+        magenta = "0x913e88";
+        cyan    = "0x0061b1";
+        white   = "0xc6c6c6";
       };
-
-      mouse.hide_when_typing = true;
-
-      key_bindings = [
-        {
-          key = "V";
-          mods = "Control|Alt";
-          action = "Paste";
-        }
-        {
-          key = "C";
-          mods = "Control|Alt";
-          action = "Copy";
-        }
-      ];
-
-      bell.duration = 100;
-
-      colors = colorschemes.solarized-dark;
+      bright = {
+        black   = "0x5e5e5e";
+        red     = "0xff9fc9";
+        green   = "0x3bd6ff";
+        yellow  = "0x00ddf4";
+        blue    = "0xd5b8ff";
+        magenta = "0xffa7f6";
+        cyan    = "0x93c9ff";
+        white   = "0xffffff";
+      };
     };
   };
 }
