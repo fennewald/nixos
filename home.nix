@@ -2,6 +2,7 @@
 let
   programs = {
     alacritty = import ./pkgs/alacritty.nix;
+    git = import ./pkgs/git.nix;
     home-manager.enable = true;
   };
 in
@@ -35,7 +36,6 @@ in
         hyperfine
         zoxide
         slack
-        git
         pulsemixer
         nushell
       ];
