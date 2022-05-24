@@ -22,14 +22,14 @@
     in {
       nixosConfigurations.omega = lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit user homepath; };
+        specialArgs = { inherit user homepath home-manager; };
         modules = [
           ./hosts/omega
           ./universal.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit user pkgs homepath; };
+            home-manager.extraSpecialArgs = { inherit user pkgs homepath home-manager; };
             home-manager.users.${user} = {
               imports = [(import ./home.nix)];
             };

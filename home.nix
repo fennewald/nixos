@@ -1,9 +1,9 @@
-{ config, lib, pkgs, user, ... }:
+{ config, lib, pkgs, user, home-manager, ... }:
 let
   programs = {
     alacritty = import ./pkgs/alacritty.nix;
     git = import ./pkgs/git.nix;
-    home-manager.enable = true;
+    home-manager = { enable = true; };
   };
 in
   {
@@ -38,6 +38,7 @@ in
         slack
         pulsemixer
         nushell
+        ocaml
       ];
     };
 
