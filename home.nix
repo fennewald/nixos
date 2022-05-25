@@ -3,6 +3,7 @@ let
   programs = {
     alacritty = import ./pkgs/alacritty.nix;
     git = import ./pkgs/git.nix;
+    starship = import ./pkgs/starship.nix;
     home-manager = { enable = true; };
   };
 in
