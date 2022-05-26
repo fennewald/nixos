@@ -25,6 +25,7 @@
   };
 
   fonts.fonts = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" "Iosevka" ]; })
     dina-font
     fira-code
     fira-code-symbols

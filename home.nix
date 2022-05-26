@@ -1,4 +1,4 @@
-{ config, lib, pkgs, user, home-manager, murder, ... }:
+{ config, lib, pkgs, user, home-manager, system, murder, ... }:
 let
   programs = {
     alacritty = import ./pkgs/alacritty.nix;
@@ -6,6 +6,7 @@ let
     starship = import ./pkgs/starship.nix;
     home-manager = { enable = true; };
   };
+  #custom_overlay = import ./overlay.nix
 in
   {
 
@@ -21,6 +22,8 @@ in
       file.".config/sway/config.d/resize-mode".source = ./conf/sway/config.d/resize-mode;
       file.".config/sway/config.d/theme".source = ./conf/sway/config.d/theme;
       file.".config/sway/config.d/workspace".source = ./conf/sway/config.d/workspace;
+
+      #pkgs.overlays = [custom_overlay];
 
       packages = with pkgs; [
         alacritty

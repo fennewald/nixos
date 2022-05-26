@@ -1,0 +1,3 @@
+final: prev: {
+  prev.nushell =
+}
