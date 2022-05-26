@@ -7,9 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    murder.url = "github:fennewald/murder";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, murder, ... }:
     let
       user = "carson";
       homepath = "/home/c/";
@@ -29,7 +30,7 @@
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit user pkgs homepath home-manager; };
+            home-manager.extraSpecialArgs = { inherit user pkgs homepath home-manager murder; };
             home-manager.users.${user} = {
               imports = [(import ./home.nix)];
             };

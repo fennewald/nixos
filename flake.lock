@@ -20,7 +20,40 @@
         "type": "github"
       }
     },
+    "murder": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1653553865,
+        "narHash": "sha256-4215/igq5xh2/OpQQyB735auwSqqcz53hVlUKIFGk7Q=",
+        "owner": "fennewald",
+        "repo": "murder",
+        "rev": "53170bc0776ff03859b75cd4f49052cfc219f1d3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fennewald",
+        "repo": "murder",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1653407748,
+        "narHash": "sha256-g9puJaILRTb9ttlLQ7IehpV7Wcy0n+vs8LOFu6ylQcM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5ce6597eca7d7b518c03ecda57d45f9404b5e060",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1652659998,
         "narHash": "sha256-FqNrXC1EE6U2RACwXBlsAvg1lqQGLYpuYb6+W3DL9vA=",
@@ -39,7 +72,8 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "murder": "murder",
+        "nixpkgs": "nixpkgs_2"
       }
     }
   },

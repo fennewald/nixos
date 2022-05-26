@@ -1,4 +1,4 @@
-{ config, lib, pkgs, user, home-manager, ... }:
+{ config, lib, pkgs, user, home-manager, murder, ... }:
 let
   programs = {
     alacritty = import ./pkgs/alacritty.nix;
@@ -40,6 +40,7 @@ in
         pulsemixer
         nushell
         ocaml
+        murder
       ];
     };
 
