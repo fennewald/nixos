@@ -17,38 +17,38 @@
 
     font = {
       size = 10.0;
-      normal.family = "JuliaMono";
+      normal.family = "FiraCode";
       normal.style = "Medium";
-      bold.family = "JuliaMono";
+      bold.family = "FiraCode";
       bold.style = "Bold";
-      italic.family = "JuliaMono";
+      italic.family = "FiraCode";
       italic.style = "Italic";
-      bold_italic.family = "JuliaMono";
+      bold_italic.family = "FiraCode";
       bold_italic.style = "Bold Italic";
     };
 
     colors = {
-      primary.foreground = "0x919191";
-      primary.background = "0x000000";
+      primary.background = "0x1c1c1c";
+      primary.foreground = "0xdfdfaf";
       normal = {
-        black   = "0x303030";
-        red     = "0xa43261";
-        green   = "0x006ca5";
-        yellow  = "0x007086";
-        blue    = "0x6751a6";
-        magenta = "0x913e88";
-        cyan    = "0x0061b1";
-        white   = "0xc6c6c6";
+        black   = "0x262626";
+        red     = "0xaf5f5f";
+        green   = "0x87875f";
+        yellow  = "0xaf875f";
+        blue    = "0x87afaf";
+        magenta = "0xaf8787";
+        cyan    = "0x57875f";
+        white   = "0xdfdfaf";
       };
       bright = {
-        black   = "0x5e5e5e";
-        red     = "0xff9fc9";
-        green   = "0x3bd6ff";
-        yellow  = "0x00ddf4";
-        blue    = "0xd5b8ff";
-        magenta = "0xffa7f6";
-        cyan    = "0x93c9ff";
-        white   = "0xffffff";
+        black   = "0x878787";
+        red     = "0xaf5f5f";
+        green   = "0x87875f";
+        yellow  = "0xaf875f";
+        blue    = "0x87afaf";
+        magenta = "0xaf8787";
+        cyan    = "0x57875f";
+        white   = "0xdfdfaf";
       };
     };
   };
