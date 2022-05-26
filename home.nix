@@ -40,7 +40,7 @@ in
         pulsemixer
         nushell
         ocaml
-        murder
+        murder.packages.x86_64-linux.murder
       ];
     };
 
