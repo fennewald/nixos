@@ -1,7 +1,7 @@
 {
   enable = true;
   settings = {
-      format = "($cmd_duration\n)($c$golang$haskell$julia$ocaml$perl$python$rust$zig\n)[┌($nix_shell)($username)($hostname)($directory)($git_branch)($package)($git_metrics)\n└─ω ](fg:#38e076)";
+      format = "($cmd_duration\n)($c$golang$haskell$julia$ocaml$perl$python$rust$zig\n)[┌($nix_shell)($username)($hostname)($directory)($git_branch)($git_status)($package)\n└─ω ](fg:#38e076)";
       continuation_prompt = "::";
 
       cmd_duration = {
@@ -61,15 +61,18 @@
           format = "─\\[$path\\]";
       };
       git_branch = {
-          format = "-\\[$branch\\]";
+          format = "─\\[$branch\\]";
+      };
+      git_status = {
+          format = "─\\[$all_status\\]";
       };
       package = {
-          format = "-\\[$version\\]";
+          format = "─\\[$version\\]";
       };
       git_metrics = {
           added_style = "fg:#00ff00";
           deleted_style = "fg:#ff0000";
-          format = "-\\[([+$added]($added_style))([-$deleted]($deleted_style))\\]";
+          format = "─\\[([+$added]($added_style))([-$deleted]($deleted_style))\\]";
           disabled = false;
       };
   };
