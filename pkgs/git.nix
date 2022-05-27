@@ -16,6 +16,13 @@
       };
     }
     {
+      condition = "gitdir:~/os/";
+      contents = {
+        user.name = "fennewald";
+        user.email = "c@rson.riker.me";
+      };
+    }
+    {
       condition = "gitdir:~/nix/";
       contents = {
         user.name = "fennewald";
