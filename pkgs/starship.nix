@@ -48,7 +48,7 @@
       };
 
       nix_shell = {
-          format = "─\\[$symbol$name\\]";
+          format = "─\\[❄️\\]";
       };
       username = {
           format = "─\\[$user\\]";

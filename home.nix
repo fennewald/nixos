@@ -30,6 +30,7 @@ in
         kakoune
         chromium
         firefox
+        kalker
         ripgrep
         htop
         bpytop
