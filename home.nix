@@ -26,11 +26,16 @@ in
       #pkgs.overlays = [custom_overlay];
 
       packages = with pkgs; [
+        rustc
+        rust-analyzer
+        cargo
+        gcc
         alacritty
         kakoune
         chromium
         firefox
         kalker
+        kak-lsp
         ripgrep
         htop
         bpytop
@@ -44,6 +49,7 @@ in
         pulsemixer
         nushell
         ocaml
+        teleport
         murder.packages.x86_64-linux.murder
       ];
     };

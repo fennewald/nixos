@@ -14,6 +14,14 @@ def create_right_prompt [] {
     $time_segment
 }
 
+def e [session: string ...name: string] {
+    if $session in (kak -l | lines) {
+        kak -c $session $name
+    } else {
+        kak -s $session $name
+    }
+}
+
 # Use nushell functions to define your right and left prompt
 let-env PROMPT_COMMAND = { create_left_prompt }
 let-env PROMPT_COMMAND_RIGHT = { create_right_prompt }

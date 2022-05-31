@@ -22,8 +22,8 @@ bar {
 }
 
 # Include
-include /etc/nixos/dotfiles/sway/config.d/*
-include /etc/sway/config
+#include /etc/nixos/dotfiles/sway/config.d/*
+include ./config.d/*
 include /etc/sway/config.d/*
 
 exec "systemctl --user import-environment; systemctl --user start sway-session.target"
