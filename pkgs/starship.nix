@@ -1,7 +1,7 @@
 {
   enable = true;
   settings = {
-      format = "($cmd_duration\n)($c$golang$haskell$julia$ocaml$perl$python$rust$zig\n)[┌($nix_shell)($username)($hostname)($directory)($git_branch)($git_status)($package)\n└─ω ](fg:#38e076)";
+      format = "($cmd_duration\n)($c$golang$haskell$julia$ocaml$perl$python$rust$zig\n)[┌($nix_shell)($username)($hostname)($directory)($git_branch)($git_status)($package)\n└─ω ](fg:#dcdccc)";
       continuation_prompt = "::";
 
       cmd_duration = {
@@ -58,7 +58,7 @@
           format = "─\\[$hostname\\]";
       };
       directory = {
-          format = "─\\[$path\\]";
+          format = "─\\[[$path](fg:#e95678)\\]";
       };
       git_branch = {
           format = "─\\[$branch\\]";

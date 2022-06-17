@@ -38,7 +38,7 @@ in
         kak-lsp
         ripgrep
         htop
-        bpytop
+        btop
         bat
         exa
         procs

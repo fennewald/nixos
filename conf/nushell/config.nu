@@ -1,11 +1,6 @@
 # Nushell Config File
 
 module completions {
-  # Custom completions for external commands (those outside of Nushell)
-  # Each completions has two parts: the form of the external command, including its flags and parameters
-  # and a helper command that knows how to complete values for those flags and parameters
-  #
-  # This is a simplified version of completions for git branches and git remotes
   def "nu-complete git branches" [] {
     ^git branch | lines | each { |line| $line | str replace '[\*\+] ' '' | str trim }
   }
@@ -73,17 +68,14 @@ module completions {
 # Get just the extern definitions without the custom completion commands
 use completions *
 
-# for more information on themes see
-# https://www.nushell.sh/book/coloring_and_theming.html
 let default_theme = {
-    # color for nushell primitives
-    separator: white
-    leading_trailing_space_bg: { attr: n } # no fg, no bg, attr none effectively turns this off
-    header: green_bold
+    separator: { fg: "#e0e0e0" }
+    leading_trailing_space_bg: { attr: n }
+    header: { fg: "#e95678" }
     empty: blue
     bool: white
     int: white
-    filesize: white
+    filesize: yellow
     duration: white
     date: white
     range: white
@@ -92,7 +84,7 @@ let default_theme = {
     nothing: white
     binary: white
     cellpath: white
-    row_index: green_bold
+    row_index: { fg: "#e95678" }
     record: white
     list: white
     block: white
@@ -100,27 +92,27 @@ let default_theme = {
 
     # shapes are used to change the cli syntax highlighting
     shape_garbage: { fg: "#FFFFFF" bg: "#FF0000" attr: b}
-    shape_binary: purple_bold
+    shape_binary: { fg: "#111111" }
     shape_bool: light_cyan
     shape_int: purple_bold
     shape_float: purple_bold
     shape_range: yellow_bold
-    shape_internalcall: cyan_bold
-    shape_external: cyan
-    shape_externalarg: green_bold
+    shape_internalcall: { fg: "#29D398" }
+    shape_external: { fg: "#29D398" }
+    shape_externalarg: { fg: "#bbbb00" }
     shape_literal: blue
-    shape_operator: yellow
+    shape_operator: { fg: "#111111" }
     shape_signature: green_bold
-    shape_string: green
+    shape_string: { fg: "#ffc400" }
     shape_string_interpolation: cyan_bold
     shape_datetime: cyan_bold
     shape_list: cyan_bold
     shape_table: blue_bold
     shape_record: cyan_bold
     shape_block: blue_bold
-    shape_filepath: cyan
+    shape_filepath: { fg: "#e95678" }
     shape_globpattern: cyan_bold
-    shape_variable: purple
+    shape_variable: { fg: "#0000ff" }
     shape_flag: blue_bold
     shape_custom: green
     shape_nothing: light_cyan
@@ -129,7 +121,7 @@ let default_theme = {
 # The default config record. This is where much of your global configuration is setup.
 let $config = {
   filesize_metric: false
-  table_mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
+  table_mode: light # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
   use_ls_colors: true
   rm_always_trash: false
   color_config: $default_theme

@@ -22,6 +22,10 @@ def e [session: string ...name: string] {
     }
 }
 
+def ns [...pkgs: string] {
+  nix-shell -p $pkgs --command nu
+}
+
 # Use nushell functions to define your right and left prompt
 let-env PROMPT_COMMAND = { create_left_prompt }
 let-env PROMPT_COMMAND_RIGHT = { create_right_prompt }
