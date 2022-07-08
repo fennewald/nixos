@@ -51,6 +51,7 @@ in
         ocaml
         teleport
         murder.packages.x86_64-linux.murder
+        zig
       ];
     };
 
