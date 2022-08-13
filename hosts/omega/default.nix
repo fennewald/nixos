@@ -64,6 +64,10 @@
     dedicatedServer.openFirewall = false;
   };
 
+  services.udev.extraRules = ''
+  ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", MODE:="0666"
+  '';
+
   environment.loginShellInit = ''
     if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
       exec sway
