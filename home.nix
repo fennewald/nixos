@@ -29,6 +29,7 @@ in
         rustc
         rust-analyzer
         cargo
+        obsidian
         gcc
         alacritty
         kakoune
